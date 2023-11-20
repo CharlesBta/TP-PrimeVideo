@@ -1,0 +1,32 @@
+.Card-Box {
+  position: relative;
+  width: 253px;
+  margin-bottom: 44px;
+
+  .Detail-Box {
+    margin-top: 15px;
+
+    .Title {
+      font-weight: 900;
+      color: $dark_blue;
+    }
+  }
+
+  .Like-Box {
+    top: 298px;
+    left: 189px;
+    position: absolute;
+  }
+  .Like-Text{
+    color: $white;
+    position: absolute;
+    top: 320px;
+    left: 205px;
+  }
+}
+
+.Card-Box:hover{
+  img{
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.45);
+  }
+}

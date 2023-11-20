@@ -1,0 +1,38 @@
+#search-bar-section{
+  height: 342px;
+
+  background-image: url("../Ressources/interstellar.jpg");
+  background-size: cover;
+  background-position-y: 56%;
+
+  display: flex;
+  justify-content: center;
+  form {
+    margin: auto;
+    background-color: $white;
+    width: 80%;
+    height: 69px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    input {
+      all: unset;
+      font-size: 22px;
+      height: 100%;
+      width: 100%;
+      padding: 6px 10px;
+    }
+    button{
+      border: none;
+      background-color: transparent;
+      i{
+        font-size: 44px;
+        padding-inline: 13px;
+      }
+    }
+    button:hover{
+      cursor: pointer;
+    }
+  }
+}

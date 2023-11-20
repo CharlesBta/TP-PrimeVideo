@@ -1,0 +1,21 @@
+.Active-Button{
+  width: 149px;
+  height: 34px;
+  background-color: $white;
+  color: $dark_blue;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  border: 3px solid $dark_blue;
+
+  margin-left: 40px;
+}
+
+.Active-Button:focus{
+  background-color: $dark_blue;
+  color: $white;
+}

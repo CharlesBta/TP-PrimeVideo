@@ -1,0 +1,42 @@
+header{
+  padding-inline: 100px;
+  background-color: $dark_blue;
+  height: 100px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  div{
+    display: flex;
+    align-items: center;
+    //margin-top: 0.8%;
+    //margin-inline: 7em;
+    .fa-film{
+      font-size: 70px;
+      color : $white;
+    }
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    //margin-top: 1.5em;
+    //margin-inline: 7em;
+    ul {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      li {
+        padding: 1em;
+        a {
+          color : $white;
+          font-weight: 900;
+          text-decoration: none;
+          width: 563px;
+          height: 44px;
+        }
+      }
+    }
+  }
+}

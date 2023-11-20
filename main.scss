@@ -1,1 +1,18 @@
-$blue : #aaaa;
+@import "./abstract/variables";
+@import "./abstract/mixins";
+
+@import "./base/base";
+@import "./base/animations";
+@import "./base/typography";
+
+@import "./components/Card-Box";
+@import "./components/active-button";
+
+@import "./layout/header";
+@import "./layout/search-bar";
+@import "layout/selecteur";
+@import "./layout/card-Section";
+@import "./layout/tendance-box";
+@import "./layout/populaire_box";
+
+
