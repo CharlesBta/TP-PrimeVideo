@@ -3,6 +3,18 @@
   width: 253px;
   margin-bottom: 44px;
 
+  a {
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+
+  img {
+    width: 220px;
+    height: 330px;
+    object-fit: cover;
+  }
+
   .Detail-Box {
     margin-top: 15px;
 
@@ -13,20 +25,21 @@
   }
 
   .Like-Box {
-    top: 298px;
+    top: 288px;
     left: 189px;
     position: absolute;
   }
-  .Like-Text{
+
+  .Like-Text {
     color: $white;
     position: absolute;
-    top: 320px;
+    top: 310px;
     left: 205px;
   }
-}
 
-.Card-Box:hover{
-  img{
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.45);
+  &:hover {
+    img {
+      box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.45);
+    }
   }
 }

@@ -8,19 +8,40 @@
     <title>Projet movie</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/07d67143b0.js" crossorigin="anonymous"></script>
+    <script defer src="./js/script.js" type="module"></script>
 </head>
 <body>
 <header>
-    <div>
-        <i class="fa-solid fa-film"></i>
-    </div>
-    <nav>
+    <!-- Desktop nav -->
+    <nav class="desktop-nav">
+        <a href="index.html"><i class="fas fa-film"></i></a>
         <ul>
-            <li><a href="*">Films</a></li>
-            <li><a href="*">Series</a></li>
-            <li><a href="*">Populaires</a></li>
+            <li><a href="">Films</a></li>
+            <li><a href="">Séries</a></li>
+            <li><a href="">Populaires</a></li>
         </ul>
     </nav>
+
+    <!-- Mobile nav -->
+
+    <nav class="nav-list-mobile" id="mobileNav">
+        <a href="index.html"><i class="fas fa-film"></i></a>
+        <div id="barr">
+            <div class="tt">
+                <div id="top-nav" class="bar"></div>
+                <div id="middle-nav" class="bar"></div>
+                <div id="bottom-nav" class="bar"></div>
+            </div>
+        </div>
+        <div class="mobile-nav-content" id="menu-nav">
+            <ul>
+                <li><a href="#">Films</a></li>
+                <li><a href="#">Séries</a></li>
+                <li><a href="#">Populaires</a></li>
+            </ul>
+        </div>
+    </nav>
+
 </header>
 <section id="search-bar-section">
     <form id="form" role="search">
@@ -31,110 +52,22 @@
 <section id="tendance">
     <div class="Selecteur">
         <h1>Tendances</h1>
-        <button class="Active-Button">Aujourd'hui</button>
-        <button class="Active-Button">Cette semaine</button>
+        <button id="td" class="Active-Button active">Aujourd'hui</button>
+        <button id="week" class="Active-Button">Cette semaine</button>
     </div>
     <div class="Card-Section">
-        <div class="Card-Box">
-            <img src="./Ressources/dune.jpg" alt="Dune">
-            <div class="Detail-Box">
-                <h2 class="Title">Dune</h2>
-                <p class="Date">15 sept 2021</p>
-            </div>
-            <svg class="Like-Box" xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
-                <circle cx="31.5" cy="31.5" r="30.5" fill="#032541" stroke="white" stroke-width="2"/>
-            </svg>
-            <p class="Like-Text">80%</p>
-        </div>
-        <div class="Card-Box">
-            <img src="./Ressources/squidgame.jpg" alt="Dune">
-            <div class="Detail-Box">
-                <h2 class="Title">Squid Game</h2>
-                <p class="Date">15 sept 2021</p>
-            </div>
-            <svg class="Like-Box" xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
-                <circle cx="31.5" cy="31.5" r="30.5" fill="#032541" stroke="white" stroke-width="2"/>
-            </svg>
-            <p class="Like-Text">80%</p>
-        </div>
-        <div class="Card-Box">
-            <img src="./Ressources/hypnotic.jpg" alt="Dune">
-            <div class="Detail-Box">
-                <h2 class="Title">Hypnotic</h2>
-                <p class="Date">15 sept 2021</p>
-            </div>
-            <svg class="Like-Box" xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
-                <circle cx="31.5" cy="31.5" r="30.5" fill="#032541" stroke="white" stroke-width="2"/>
-            </svg>
-            <p class="Like-Text">80%</p>
-        </div>
-        <div class="Card-Box">
-            <img src="./Ressources/after.jpg" alt="Dune">
-            <div class="Detail-Box">
-                <h2 class="Title">After</h2>
-                <p class="Date">15 sept 2021</p>
-            </div>
-            <svg class="Like-Box" xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
-                <circle cx="31.5" cy="31.5" r="30.5" fill="#032541" stroke="white" stroke-width="2"/>
-            </svg>
-            <p class="Like-Text">80%</p>
-        </div>
     </div>
 </section>
-<section id="populaire">
-    <div class="Selecteur">
-        <h1>Populaire</h1>
-        <button class="Active-Button">Streaming</button>
-        <button class="Active-Button">TV</button>
-        <button class="Active-Button">Cinéma</button>
-    </div>
-    <div class="Card-Section">
-        <div class="Card-Box">
-            <img src="./Ressources/dune.jpg" alt="Dune">
-            <div class="Detail-Box">
-                <h2 class="Title">Dune</h2>
-                <p class="Date">15 sept 2021</p>
-            </div>
-            <svg class="Like-Box" xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
-                <circle cx="31.5" cy="31.5" r="30.5" fill="#032541" stroke="white" stroke-width="2"/>
-            </svg>
-            <p class="Like-Text">80%</p>
+<div id="Backgroud_Series">
+    <section id="Series">
+        <div class="Selecteur">
+            <h1>Series</h1>
+            <button id="top" class="Active-Button active">Top</button>
+            <button id="pop" class="Active-Button">Populaire</button>
         </div>
-        <div class="Card-Box">
-            <img src="./Ressources/squidgame.jpg" alt="Dune">
-            <div class="Detail-Box">
-                <h2 class="Title">Squid Game</h2>
-                <p class="Date">15 sept 2021</p>
-            </div>
-            <svg class="Like-Box" xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
-                <circle cx="31.5" cy="31.5" r="30.5" fill="#032541" stroke="white" stroke-width="2"/>
-            </svg>
-            <p class="Like-Text">80%</p>
+        <div class="Card-Section">
         </div>
-        <div class="Card-Box">
-            <img src="./Ressources/hypnotic.jpg" alt="Dune">
-            <div class="Detail-Box">
-                <h2 class="Title">Hypnotic</h2>
-                <p class="Date">15 sept 2021</p>
-            </div>
-            <svg class="Like-Box" xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
-                <circle cx="31.5" cy="31.5" r="30.5" fill="#032541" stroke="white" stroke-width="2"/>
-            </svg>
-            <p class="Like-Text">80%</p>
-        </div>
-        <div class="Card-Box">
-            <img src="./Ressources/after.jpg" alt="Dune">
-            <div class="Detail-Box">
-                <h2 class="Title">After</h2>
-                <p class="Date">15 sept 2021</p>
-            </div>
-            <svg class="Like-Box" xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none">
-                <circle cx="31.5" cy="31.5" r="30.5" fill="#032541" stroke="white" stroke-width="2"/>
-            </svg>
-            <p class="Like-Text">80%</p>
-        </div>
-    </div>
-</section>
-
+    </section>
+</div>
 </body>
 </html>

@@ -1,5 +1,13 @@
 #tendance{
   background-color: $white;
-  padding-inline: 100px;
   padding-top: 50px;
+  width: 80%;
+  margin : auto;
+}
+
+@media screen and (max-width: 1300px) {
+  #tendance{
+    max-width: 700px;
+  }
+
 }
