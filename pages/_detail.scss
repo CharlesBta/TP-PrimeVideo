@@ -19,7 +19,7 @@ $transition-duration: 0.3s;
 }
 
 .actor-image {
-  width: 300px
+  width: 300px;
 }
 
 .desktop-nav {
@@ -72,7 +72,7 @@ $transition-duration: 0.3s;
   @include flex-center;
   @include flex-space-between;
   width: 100%;
-  display: none ;
+  display: none;
   background-color: $primary-color;
   height: 70px;
 
@@ -156,6 +156,23 @@ footer {
   }
 }
 
+.trailer-banner {
+  background-color: #f0f0f0; /* Couleur de fond grise */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 0;
+  width: 100%;
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  iframe {
+    border: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .desktop-nav {
     display: none;
@@ -163,7 +180,6 @@ footer {
 
   .mobile-nav {
     @include flex-center;
-
   }
 
   #mobileNav {

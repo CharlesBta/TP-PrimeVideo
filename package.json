@@ -7,5 +7,8 @@
     "sass": "sass --watch main.scss:./css/style.css --style compressed"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
 }

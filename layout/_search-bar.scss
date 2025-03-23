@@ -1,14 +1,15 @@
-#search-bar-section{
-  height: 342px;
+$white: #ffffff;
 
+#search-bar-section {
+  height: 342px;
   background-image: url("../Ressources/interstellar.jpg");
   background-size: cover;
   background-position-y: 56%;
-
   display: flex;
   justify-content: center;
+  flex-direction: column;
+
   form {
-    margin: auto;
     background-color: $white;
     width: 80%;
     height: 69px;
@@ -16,6 +17,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: auto auto 0;
+
     input {
       all: unset;
       font-size: 22px;
@@ -23,16 +26,69 @@
       width: 100%;
       padding: 6px 10px;
     }
-    button{
+
+    button {
       border: none;
       background-color: transparent;
-      i{
+
+      i {
         font-size: 44px;
         padding-inline: 13px;
       }
     }
-    button:hover{
+
+    button:hover {
       cursor: pointer;
+    }
+  }
+
+  #search-results {
+    margin: 0 auto auto 10%;
+    width: 100%;
+    height: 0;
+    background-color: transparent;
+    padding: 0 10px 10px;
+    z-index: 1000; // Assurez-vous que les résultats apparaissent au-dessus d'autres éléments
+
+    .search-result-item {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      width: 20%;
+      background-color: $white;
+      box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.1);
+
+
+      img {
+        width: 50px;
+        height: auto;
+        margin-right: 10px;
+      }
+
+      .Detail-Box {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .Title {
+        font-size: 16px;
+        margin: 0;
+
+      }
+
+      .Date {
+        font-size: 14px;
+        color: #777;
+      }
+    }
+
+    .search-result-item:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .search-result-item:first-child {
+      margin-top: 0;
     }
   }
 }

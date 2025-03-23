@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Projet movie</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css"> <!-- Assurez-vous que ce chemin pointe vers le CSS compilé -->
     <script src="https://kit.fontawesome.com/07d67143b0.js" crossorigin="anonymous"></script>
     <script defer src="./js/script.js" type="module"></script>
 </head>
@@ -16,14 +16,13 @@
     <nav class="desktop-nav">
         <a href="index.html"><i class="fas fa-film"></i></a>
         <ul>
-            <li><a href="">Films</a></li>
-            <li><a href="">Séries</a></li>
-            <li><a href="">Populaires</a></li>
+            <li><a href="#tendance">Films</a></li>
+            <li><a href="#Series">Séries</a></li>
+            <li><a href="#tendance">Populaires</a></li>
         </ul>
     </nav>
 
     <!-- Mobile nav -->
-
     <nav class="nav-list-mobile" id="mobileNav">
         <a href="index.html"><i class="fas fa-film"></i></a>
         <div id="barr">
@@ -41,14 +40,17 @@
             </ul>
         </div>
     </nav>
-
 </header>
+
 <section id="search-bar-section">
     <form id="form" role="search">
-        <input placeholder="Chercher un film">
-        <button><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
+        <input type="text" id="search-bar" placeholder="Rechercher...">
+        <button type="button"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
     </form>
+    <div id="search-results">
+    </div>
 </section>
+
 <section id="tendance">
     <div class="Selecteur">
         <h1>Tendances</h1>
@@ -56,6 +58,10 @@
         <button id="week" class="Active-Button">Cette semaine</button>
     </div>
     <div class="Card-Section">
+        <img src="/Ressources/popcorntime.webp" alt="popcorntime" class="Card-Box">
+        <img src="/Ressources/popcorntime.webp" alt="popcorntime" class="Card-Box">
+        <img src="/Ressources/popcorntime.webp" alt="popcorntime" class="Card-Box">
+        <img src="/Ressources/popcorntime.webp" alt="popcorntime" class="Card-Box">
     </div>
 </section>
 <div id="Backgroud_Series">
@@ -66,6 +72,10 @@
             <button id="pop" class="Active-Button">Populaire</button>
         </div>
         <div class="Card-Section">
+            <img src="/Ressources/popcorntime.webp" alt="popcorntime" class="Card-Box">
+            <img src="/Ressources/popcorntime.webp" alt="popcorntime" class="Card-Box">
+            <img src="/Ressources/popcorntime.webp" alt="popcorntime" class="Card-Box">
+            <img src="/Ressources/popcorntime.webp" alt="popcorntime" class="Card-Box">
         </div>
     </section>
 </div>
