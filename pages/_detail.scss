@@ -186,3 +186,7 @@ footer {
     @include flex-center;
   }
 }
+
+a {
+  text-decoration: none;
+}

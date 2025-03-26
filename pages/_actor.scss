@@ -1,0 +1,59 @@
+// Variables pour les couleurs et les tailles
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$text-color: #333;
+$font-size-base: 16px;
+
+// Mixin pour les bordures arrondies
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+.actor-container {
+  padding: 20px;
+
+  .actor-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+      width: 150px;
+      height: 150px;
+      @include border-radius(50%);
+      margin-right: 20px;
+    }
+  }
+
+  .actor-films {
+    margin-top: 20px;
+
+    h2 {
+      margin-bottom: 10px;
+      color: $primary-color;
+    }
+
+    .film {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .film-poster {
+        width: 100px;
+        height: 150px;
+        margin-right: 10px;
+        @include border-radius(5px);
+      }
+
+      h3 {
+        color: $text-color;
+        font-size: $font-size-base;
+      }
+
+      p {
+        color: $secondary-color;
+        font-size: 0.9em;
+      }
+    }
+  }
+}

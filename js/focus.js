@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fetchData(mediaUrl).then(data => {
             const banner = document.querySelector('.banner');
             banner.style.backgroundImage = `url(https://image.tmdb.org/t/p/original${data.backdrop_path})`;
-
+            
             document.getElementById('focus-poster').src = `https://image.tmdb.org/t/p/w500${data.poster_path}`;
             document.getElementById('focus-title').innerText = data.title || data.name;
             document.getElementById('focus-release-date').innerText = new Date(data.release_date || data.first_air_date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
@@ -34,15 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     const actorElement = document.createElement('div');
                     actorElement.classList.add('actor');
                     actorElement.innerHTML = `
+                        <a href="../pages/actor.html?id=${actor.id}" class="actor-link">
                         <img src="https://image.tmdb.org/t/p/w500${actor.profile_path}" alt="${actor.name}" class="actor-image">
-                        <h4>${actor.name}</h4>
+                        <h4 class="actor-name">${actor.name}</h4>
                         <span>${actor.character}</span>
+                        </a>
                     `;
+                    actorElement.querySelector('.actor-name').addEventListener('click', () => {
+                        window.location.href = `actor.html?id=${actor.id}`;
+                    });
                     castContainer.appendChild(actorElement);
                 });
             }
 
-            // Ajouter la bande-annonce
             const trailer = data.videos.results.find(video => video.type === 'Trailer' && video.site === 'YouTube');
             if (trailer) {
                 document.getElementById('focus-trailer').src = `https://www.youtube.com/embed/${trailer.key}`;
